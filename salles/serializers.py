@@ -22,14 +22,13 @@ from .models import Reservation, Salle
 class SalleSerializer(serializers.ModelSerializer):
     class Meta:
         model = Salle
-        fields = ["id", "nom", "capacite", "batiment"]
+        fields = ["nom", "capacite", "batiment"]
 
 
 class ReservationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Reservation
         fields = [
-            "id",
             "salle",
             "utilisateur",
             "debut",
